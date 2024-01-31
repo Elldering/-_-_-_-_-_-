@@ -1,0 +1,238 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Информационная_Система_Учета_Товаров_на_Складе"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Name="Autorization_window" x:Class="Информационная_Система_Учета_Товаров_на_Складе.Sklad"
+        
+        mc:Ignorable="d"
+        Title="Sklad" Height="534" Width="1283">
+    <Grid Background="#FFB0C4B1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="171*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="377*"/>
+            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="172*"/>
+            <ColumnDefinition Width="196*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28.973"/>
+            <RowDefinition Height="47.027"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="exit" Content="Выход"
+        Margin="4,2,5,0"
+        Background="#4A5759"
+        BorderBrush="Transparent"
+        Foreground="#FFACACAC"
+        FontSize="20"
+        FontWeight="Bold" Click="exit_Click" Grid.Column="2" Grid.Row="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Product_window" Content="Продукты"
+            Margin="5,6,5,10"
+            Background="#4A5759"
+            BorderBrush="Transparent"
+            Foreground="#FFACACAC"
+            FontSize="20"
+            FontWeight="Bold" Grid.Row="11" Click="Product_window_Click" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="Вывод последних изменений"
+            Margin="22,6,10,10"
+            Background="#4A5759"
+            BorderBrush="Transparent"
+            Foreground="#FFACACAC"
+            FontSize="20"
+            FontWeight="Bold" Grid.Column="4" Grid.Row="11">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="add_btn" Content="Добавить товар"
+            Margin="59,5,75,1"
+            Background="#4A5759"
+            BorderBrush="Transparent"
+            Foreground="#FFACACAC"
+            FontSize="20"
+            FontWeight="Bold" Grid.Column="7" Grid.Row="10" Grid.ColumnSpan="2" Click="add_btn_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="delete_btn" Content="Удалить товар"
+            Margin="0,10,5,10"
+            Background="#4A5759"
+            BorderBrush="Transparent"
+            Foreground="#FFACACAC"
+            FontSize="20"
+            FontWeight="Bold" Grid.Column="6" Grid.Row="11" Click="delete_btn_Click" Grid.ColumnSpan="2">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="cahnge_btn" Content="Изменить товар"
+            Margin="5,10,10,10"
+            Background="#4A5759"
+            BorderBrush="Transparent"
+            Foreground="#FFACACAC"
+            FontSize="20"
+            FontWeight="Bold" Grid.Column="8" Grid.Row="11" Click="cahnge_btn_Click" Grid.ColumnSpan="2">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <DataGrid IsReadOnly="True" x:Name="sklad_grid" Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="4" Margin="2,0,10,0" Grid.RowSpan="7" Background="#FFDEDBD2" SelectionChanged="sklad_grid_SelectionChanged" Grid.Column="2"/>
+        <TextBlock Text="Наименование товара" TextWrapping="Wrap" Margin="19,0,14,11" FontSize="24" Background="Transparent" Grid.Column="6" Grid.ColumnSpan="3" TextAlignment="Center" Grid.Row="3"></TextBlock>
+
+
+        <Border Background="#FF84A2A7" Margin="1,5,10,0" Grid.Column="7" Grid.ColumnSpan="3" Grid.Row="9">
+            <Border.BorderThickness>2</Border.BorderThickness>
+            <Border.CornerRadius>30</Border.CornerRadius>
+            <TextBox x:Name="address_sklad" TextWrapping="Wrap" Margin="16,0,8,8" FontSize="20" materialDesign:HintAssist.Hint="" Background="Transparent" BorderBrush="#00ABADB3" 
+                SelectionBrush="#000078D7" SelectionTextBrush="Transparent"/>
+
+        </Border>
+
+        <TextBlock TextWrapping="Wrap" Margin="18,1,16,1" FontSize="24" Background="Transparent" Grid.Column="6" Grid.ColumnSpan="3" TextAlignment="Center" Grid.Row="5"><Run Text=" Имя"/><Run Language="ru-ru" Text=" со"/><Run Text="трудника"/></TextBlock>
+
+
+
+        <TextBlock Text="Адрес склада" TextWrapping="Wrap" Margin="18,1,16,0" FontSize="24" Background="Transparent" Grid.Column="6" Grid.ColumnSpan="3" TextAlignment="Center" Grid.Row="8"/>
+
+
+
+
+        <ComboBox
+        materialDesign:HintAssist.Hint="Some item"
+        IsEnabled="{Binding IsChecked, ElementName=OutlinedComboBoxEnabledCheckBox}"
+        ItemsSource="{Binding ShortStringList}"
+        Grid.Column="6" Margin="19,46,4,3" Grid.Row="5" Background="#FF84A2A7" BorderBrush="#00ACACAC" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <ComboBox.Style>
+                <Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ComboBox}">
+                                <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="30">
+                                    <Grid>
+                                        <!-- Ваш шаблон для ComboBox -->
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+        <ComboBox
+            materialDesign:HintAssist.Hint="Some item"
+            IsEnabled="{Binding IsChecked, ElementName=OutlinedComboBoxEnabledCheckBox}"
+            ItemsSource="{Binding ShortStringList}"
+            Grid.Column="7" Margin="2,10,3,4" Grid.Row="4" Background="#FF84A2A7" BorderBrush="#00DA6666" Grid.ColumnSpan="2">
+            <ComboBox.Style>
+                <Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ComboBox}">
+                                <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="30">
+                                    <Grid>
+                                        <!-- Ваш шаблон для ComboBox -->
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+        <ComboBox x:Name="name_product_combobox" Grid.Column="7" Grid.ColumnSpan="2" Margin="19,10,18,10" Grid.Row="4" VerticalAlignment="Stretch"/>
+        <ComboBox x:Name="Name_combobox" Grid.Column="7" Grid.ColumnSpan="2" Margin="18,4,19,9" Grid.Row="6" VerticalAlignment="Stretch"/>
+
+
+    </Grid>
+</Window>

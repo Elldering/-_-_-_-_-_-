@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Информационная_Система_Учета_Товаров_на_Складе", "Информационная_Система_Учета_Товаров_на_Складе\Информационная_Система_Учета_Товаров_на_Складе.csproj", "{FCEAE68D-24EB-42DC-A851-EF2D10B038ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCEAE68D-24EB-42DC-A851-EF2D10B038ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEAE68D-24EB-42DC-A851-EF2D10B038ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEAE68D-24EB-42DC-A851-EF2D10B038ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEAE68D-24EB-42DC-A851-EF2D10B038ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {578C0CDA-CB62-414A-9793-B8B5E7E8C5E7}
+	EndGlobalSection
+EndGlobal
